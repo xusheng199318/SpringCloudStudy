@@ -27,7 +27,7 @@ public class ApplicationTests {
     public void testSaveDepart() {
         Depart depart = new Depart();
         depart.setName("开发部");
-        depart.setDbname("北京");
+        depart.setDbase("上海");
         departService.saveDepart(depart);
         log.info("return departId is {}", depart.getId());
     }

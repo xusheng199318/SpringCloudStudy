@@ -5,7 +5,7 @@
 <mapper namespace="com.arthur.dao.DepartDAO">
 
     <insert id="saveDepart" parameterType="depart" keyProperty="id" useGeneratedKeys="true">
-        INSERT INTO depart (id, name, dbname) VALUES (#{id}, #{name}, #{dbname})
+        INSERT INTO depart (id, name, dbase) VALUES (#{id}, #{name}, #{dbase})
     </insert>
 
     <select id="getDepartById" resultType="depart">

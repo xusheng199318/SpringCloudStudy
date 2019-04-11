@@ -6,5 +6,5 @@ import lombok.Data;
 public class Depart {
     private Integer id;
     private String name;
-    private String dbname;
+    private String dbase;
 }
