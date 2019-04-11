@@ -4,8 +4,6 @@ server:
     context-path: /provider
 
 logging:
-  pattern:
-    console: level-%level %msg%n
   level:
     root: info
     com.arthur: debug
