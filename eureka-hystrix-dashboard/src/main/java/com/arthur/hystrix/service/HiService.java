@@ -1,7 +1,7 @@
-package com.arthur.feign.service;
+package com.arthur.hystrix.service;
 
-import com.arthur.feign.config.FeignConfig;
-import com.arthur.feign.config.HiHystrix;
+import com.arthur.hystrix.config.FeignConfig;
+import com.arthur.hystrix.config.HiHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "eureka-client",
         configuration = FeignConfig.class,
         fallback = HiHystrix.class)
-public interface HiServiceTest {
+public interface HiService {
 
     @GetMapping("/hi")
-    String sayHi(@RequestParam("name") String name);
+    String sayHi(@RequestParam(value = "name", required = false) String name);
 }

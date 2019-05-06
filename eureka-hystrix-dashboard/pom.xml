@@ -8,10 +8,10 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.arthur.feign</groupId>
-	<artifactId>eureka-feign-client</artifactId>
+	<groupId>com.arthur.hystrix</groupId>
+	<artifactId>eureka-hystrix-dashboard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>eureka-feign-client</name>
+	<name>eureka-hystrix-dashboard</name>
 	<description>Demo project for Spring Cloud</description>
 
 	<properties>
@@ -30,10 +30,20 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
