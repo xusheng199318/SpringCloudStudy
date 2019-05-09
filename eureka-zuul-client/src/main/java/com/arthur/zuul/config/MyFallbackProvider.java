@@ -5,6 +5,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.io.InputStream;
 /**
  * Created by xusheng on 2019/5/8.
  */
+@Component
 public class MyFallbackProvider implements FallbackProvider {
     public String getRoute() {
         return "eureka-feign-client";
